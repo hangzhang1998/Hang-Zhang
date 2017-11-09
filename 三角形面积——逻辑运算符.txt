@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+#define PES 1e-9
+
+int main (void)
+{
+    float a,b,c,s;
+    printf("Input the a,b,c:");
+    scanf("%f,%f,%f",&a,&b,&c);
+    printf("the number of bytes:%5d%5d%5d .\n",sizeof(a),sizeof(b),sizeof(c));
+
+    s = (a+c+b)/2;
+
+    if (a+b>c && a+c>b && c+b>a)
+    {
+        printf("\n\nThis is a triangle !\n");
+        printf("The triangle's area is %f .\n",(double)sqrt(s*(s-a)*(s-b)*(s-c)));
+    }
+    else
+    {
+        printf("\n\nAttention :  This is not a triangle !\n");
+    }
+    return 0;
+}

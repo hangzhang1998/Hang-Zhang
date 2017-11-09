@@ -1,0 +1,101 @@
+#include <stdio.h>
+
+int main (void)
+{
+    int year,month,try1;  //set integer variable
+
+    printf("Input the year:");
+    scanf("%d",&year);
+    printf("Input the month:");
+    scanf("%d",&month);
+               //input the variable
+    if (month==1||month==2||month==3||month==4||month==5||month==6||month==7||month==8
+        ||month==9||month==10||month==11||month==12)
+    {
+      if (year%4==0&&year%100!=0||year%400==0)
+        printf("-----This year is a leap year.\n");
+      else
+        printf("-----This year is a leap year.\n");
+
+      //check the year is a leap year or not
+
+        switch (month)
+        {
+        case 1:
+            {
+                printf("----------   This month has 31 days.\n");
+                break;
+            }
+        case 2:
+            {
+                if (year%4 == 0 && year%100 != 0 || year%400==0)
+                {
+                    printf("----------   This month has 29 days.\n");
+                }
+                else
+                {
+                    printf("----------   This month has 28 days.\n");
+                }
+                // check the year is a leap year or not ,write in there to save the code.
+                break;
+            }
+        case 3:
+            {
+                printf("----------   This month has 31 days.\n");
+                break;
+            }
+        case 4:
+            {
+                printf("----------   This month has 30 days.\n");
+                break;
+            }
+        case 5:
+            {
+                printf("----------   This month has 31 days.\n");
+                break;
+            }
+        case 6:
+            {
+                printf("----------   This month has 30 days.\n");
+                break;
+            }
+        case 7:
+            {
+                printf("----------   This month has 31 days.\n");
+                break;
+            }
+        case 8:
+            {
+                printf("----------   This month has 31 days.\n");
+                break;
+            }
+        case 9:
+            {
+                printf("----------   This month has 30 days.\n");
+                break;
+            }
+        case 10:
+            {
+                printf("----------   This month has 31 days.\n");
+                break;
+            }
+        case 11:
+            {
+                printf("----------   This month has 30 days.\n");
+                break;
+            }
+        case 12:
+            {
+                printf("----------   This month has 31 days.\n");
+                break;
+            }
+        }
+    }
+    //month is over
+    else
+    {
+        printf("--------------     Please check your inputted month again.\n");
+    }
+    //if the month is not true.
+    return 0;
+}

@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+int main (void)
+{
+    int  term , i = 1, count = 0, h, t, p,x;
+    for (term=100;term <=999;term++)
+    {
+         h = term / 100;
+         t     = (term - h * 100) / 10;
+         p    = term - h * 100 - t * 10;
+      //   printf("hundred = %d,ten = %d,part = %d\n",h,t,p);
+         if (term == h*h*h + p*p*p + t*t*t)
+            {
+                printf(" term = %d------------\n",term);
+                count++;
+            }
+    }
+    printf("----------------------count = %d-----------------------\n",count);
+    return 0;
+}

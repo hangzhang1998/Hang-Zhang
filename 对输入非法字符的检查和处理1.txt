@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main (void)
+{
+    int  a,b,c,max,ret;
+
+    printf("Input a, b:");
+    ret = scanf("%d,%d,%d",&a,&b,&c);   //记录scanf()函数的返回值
+
+    if (ret != 3)   //根据scanf()函数的返回值，判断输入数据个数或者格式是否错误
+    {
+        printf("Input data quantity or format error! \n");
+        fflush(stdin);   //清楚缓冲区中的错误数据
+    }
+    else    //此处可以是正确读入数据后应该执行的操作
+    {
+        if (a>b && a>c)
+        printf("max = % d \n",a);
+        if (b>c && b>a)
+            printf ("max = % d",b);
+        if (c>a && c>b)
+            printf("max = % d",c);
+    }
+    return 0;
+}

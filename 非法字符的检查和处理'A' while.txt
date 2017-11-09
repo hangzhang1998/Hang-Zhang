@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (void)
+{
+    char  x;
+
+    printf("Input:");
+    scanf("%c",&x);
+
+    while  (x == 'A')
+    {
+        printf("error!\n");
+        fflush(stdin);
+        exit(1);
+    }
+    printf("%c",&x);
+    return 0;
+}

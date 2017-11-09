@@ -1,0 +1,43 @@
+
+#include <stdio.h>
+#include <math.h>
+
+int main (void)
+{
+    int year;
+    double deposit,rate,TFD,a;
+
+    printf("Input the period:");
+    scanf("%d",&year);
+    printf("Input the deposit:");
+    scanf ("%lf",&deposit);
+    printf("Input the rate:");
+    scanf("%lf",&rate);
+
+    if (year == 1 || year == 2 || year == 3 || year == 5 || year == 8)
+    {
+        printf("The year is right inputting\n");
+
+        TFD = pow((rate+1),(double)year)*deposit;
+
+        switch (year)
+        {
+        case 1:
+            printf("the future deposit is %lf\n",TFD);
+        case 2:
+            printf("the future deposit is %lf\n",TFD);
+        case 3:
+            printf("the future deposit is %lf\n",TFD);
+        case 5:
+            printf("the future deposit is %lf\n",TFD);
+        case 8:
+            printf("the future deposit is %lf\n",TFD);
+        }
+    }
+    else
+        {
+            printf("The years is worry input!\n");
+        }
+
+    return 0;
+}

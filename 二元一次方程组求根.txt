@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+int main (void)
+{
+    float    a11,a12,a22,a21,
+             b1,b2,
+             x1,x2,y;
+
+    printf("Input a11 = \n");
+    scanf("%f",&a11);
+    printf("Input a12 = \n");
+    scanf("%f",&a12);
+    printf("Input b1 = \n");
+    scanf("%f",&b1);
+    printf("Input a21 = \n");
+    scanf("%f",&a21);
+    printf("Input a22 = \n");
+    scanf("%f",&a22);
+    printf("Input b2 = \n");
+    scanf("%f",&b2);
+
+    x1 = b1 * a22 - b2 * a12;
+    x2 = a11 * b2 - a21 * b1;
+    y  = a11 * a22 - a12 * a21;
+
+    if (sqrt(y) > 0 )
+    {
+        printf("x = %f ,y = %f",x1/y,x2/y);
+    }
+    else
+    {
+        printf("the solutions are not one.");
+    }
+    return 0;
+}

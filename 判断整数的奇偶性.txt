@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+int main (void)
+{
+    int y,x;
+    const float a=1e-1;
+    printf("Input :");
+    scanf("%d",&x);
+    printf("\nnumber of bytes: %4d\n",sizeof(x));
+
+    y = fabs(x);
+
+    if (fabs(x) == 1)
+        printf("\nit's an odd number !\n");
+    else if (x == a)
+        printf("\nit's an even !\n");
+         else if (y%2 == 0)
+            printf("\nit's an even !\n");
+         else
+            printf("\nit's an odd number !\n");
+
+    return  0;
+}

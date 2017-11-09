@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main (void)
+{
+    int  n,i;
+    float   sqrts,pows;
+    double  sum_pows,sum_sqrts;
+
+    printf("Input the n:");
+    scanf ("%d",&n);
+        sum_pows = 1;
+
+    for (i = 1; i <= n; i++)
+    {
+        sum_pows *= (float)i;
+        sqrts = (double)sqrt(i);
+        sum_sqrts += sqrts;
+        printf("i = %d ; pow = %lf ;  sqrt = %lf \n",i,sum_pows,sqrts);
+    }
+    printf("the sum of pow : %f   , the sum of sqrt : %f\n\n",sum_pows,sum_sqrts);
+    return 0;
+}

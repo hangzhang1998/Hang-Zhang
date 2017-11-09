@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main (void)
+{
+    float  x;
+    printf("Input the scores:");
+    scanf("%f",&x);
+
+    if (90<=x && x<=100)
+    {
+        printf("the scores is ----- A.\n");
+    }
+    else if (80<=x && x<90)
+    {
+        printf("the scores is -----B.\n");
+    }
+    else if (70<=x && x<80)
+    {
+        printf("the scores is -----C.\n");
+    }
+    else if (60<=x && x<70)
+    {
+        printf("the scores is -----D.\n");
+    }
+    else if (0<=x && x<60)
+    {
+        printf("the scores is -----E.\n");
+    }
+    else {printf("Please input the scores again ,maybe it was not true.");}
+    return 0;
+}

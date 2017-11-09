@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main (void)
+{
+    int x,y,answer;
+    srand(time(NULL));
+
+    x = rand() % 100 + 1;
+    y = rand() % 100 + 1;
+
+    printf(" %d * %d = ", x, y);
+    scanf("%d",&answer);
+
+    if (answer == x * y )
+        printf("Right !\n");
+    else
+        printf("Error !\n");
+
+    return 0;
+}

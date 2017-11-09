@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+int main (void)
+{
+    char  a;
+    int  flag;
+
+    printf("Input the char you want inputted:");
+    scanf("%c",&a);
+
+    if (65<=a && 90>=a )
+    {
+        printf("Capital\n");
+    }
+    else if (97<=a && 122>=a)
+    {
+        printf("Lower case\n");
+
+    }
+         else
+         {
+             printf("No letter\n");
+         }
+
+    return 0;
+}

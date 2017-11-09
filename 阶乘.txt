@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (void)
+{
+    int i,n;
+    long p=1;
+
+    printf("Input n:");
+    scanf("%d",&n);
+
+    for ( i=1; i <=n ; i++ )
+    {
+        p = p*i;
+        printf("p = %d ;  i = %d\n",p,i);
+    }
+    printf(" %d! = %ld.\n,",n,p);
+    return 0;
+}

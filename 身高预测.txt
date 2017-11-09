@@ -1,0 +1,90 @@
+#include <stdio.h>
+
+int main (void)
+{
+    char     diet,sex,sports,a1,a2,a3,a4;
+    float    moheight,faheight;
+
+    printf("diet:");
+    scanf("%c",&diet);
+    a1=getchar();
+
+    if (diet!='y' || diet!= 'Y' || diet!='N' ||diet!='n')
+        printf("The diet maybe not truth.\nPlease check it again.\n");
+
+    printf("sex:");
+    scanf("%c",&sex);
+    a2=getchar();
+    printf("sports:");
+    scanf("%c",&sports);
+    a3=getchar();
+
+    if (sports!='Y' || sports!='y' || sports!='N' || sports!='n')
+        printf("The sports maybe not truth.\nPlease check it again.\n");
+
+    printf("father height:");
+    scanf("%f",&faheight);
+    a4=getchar();
+    printf("mother height:");
+    scanf("%f",&moheight);
+
+    if (sex=='f' || sex=='F' || sex=='m' || sex=='M')
+    {
+        if(sex=='m' || sex=='M')
+        {
+           if (sports=='y' || sports=='Y')
+           {
+               if (diet=='Y' || diet=='y')
+               {
+                   printf("This male will be %f cm.",(faheight+moheight)*0.54*(0.02+1+0.015));
+               }
+               else
+               {
+                   printf("This male will be %f cm.",(faheight+moheight)*0.54*(1+0.02));
+               }
+           }
+           else
+           {
+               if (diet=='y' || diet=='Y')
+               {
+                   printf("This male will be %f cm.",(faheight+moheight)*0.54*(1+0.015));
+               }
+               else
+               {
+                   printf("This male will be %f cm.",(faheight+moheight)*0.56);
+               }
+           }
+        }
+        else
+        {
+            if (sports=='y' ||sports=='Y')
+            {
+                if (diet=='Y' || diet=='y')
+                {
+                    printf("This female will be %f cm.",((faheight*0.923+moheight)/2)*(0.02+1+0.015));
+                }
+                else
+                {
+                    printf("This female will be %f cm.",((faheight*0.923+moheight)/2)*(1+0.02));
+                }
+            }
+            else
+            {
+                if (diet=='y' || diet=='Y')
+                {
+                    printf("This female will be %f cm.",((faheight*0.923+moheight)/2)*(1+0.015));
+                }
+                else
+                {
+                    printf("This female will be %f cm.",(faheight*0.923+moheight)/2);
+                }
+            }
+        }
+    }
+    else
+    {
+        printf("The sex you put in may be not right.\nPlease check it again.\n");
+    }
+
+    return 0;
+}

@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+
+int main (void)
+{
+    double term=1.0,sum=1.0;
+    int n = 1 ,count = 1;
+    do{
+        term = term / n;
+        sum  = sum + term;
+        n++;
+        count++;
+        printf("count = %d; sum = %f\n",count, sum);
+    }while (fabs(term)>= 1e-5);
+    printf("------------count = % d; sum = %f\n",count,sum);
+    return 0;
+}

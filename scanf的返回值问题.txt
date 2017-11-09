@@ -1,0 +1,14 @@
+void main()
+{
+int a,b,c,ret;
+printf("Input a,b,c:");
+ret =scanf("%d%d%d",&a,&b,&c);
+printf("%d\n",ret);
+}
+
+
+
+当运行中，输入三个数为：5 6 7，则ret的值为3.
+当输入5 6 d，即给c赋值不正确，则x的值为2.
+当scanf函数的第一个变量格式不正确时，返回值为0.
+当scanf函数的第n个变量格式不正确时，返回值为n-1.

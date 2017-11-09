@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int main (void)
+{
+    char   a;
+
+    printf("Input the char:");
+    scanf("%c",&a);
+
+    if ( a <= 90 && a >= 65 )
+    {
+        printf("\n------- %c -------\n",a+32);
+    }
+    else if ( a <=122 && a >= 97 )
+    {
+        printf("\n------- %c -------\n",a-32);
+    }
+         else
+         {
+             printf("\n------- %d -------\n",a);
+         }
+    return 0;
+} 
+// ASCII   a¡«z £º97¡«122.      A~Z £º65¡«90.

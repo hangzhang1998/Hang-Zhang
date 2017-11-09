@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int main (void)
+{
+    float a,b,c,x,y;
+    char judge;
+
+    printf("Input :");
+    scanf("%f,%f,%f",&a,&b,&c);
+
+    judge = b*b-4*a*c>=0 ? 't' : 'f';
+
+    switch (judge)
+    {
+    case 't':
+        {
+            printf("x1=%f,------ x2=%f\n",(-b+sqrt(b*b-4*a*c))/(2*a),(-b-sqrt(b*b-4*a*c))/(2*a));
+            break;
+        }
+    case 'f':
+        {
+            printf("No answers!\n");
+            break;
+        }
+    }
+    return 0;
+}
