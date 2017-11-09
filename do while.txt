@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (void)
+{
+    int i,n,sum;
+    printf("Input n:");
+    scanf("%d",&n);
+    sum = 0;
+    i = 1;
+
+    do
+    {
+        sum += i;
+        i++;
+        printf("i = %d, sum = %d\n",i,sum);
+    }
+    while ( i <= n);
+
+    printf("sum = %d\n",sum);
+    return 0;
+}
