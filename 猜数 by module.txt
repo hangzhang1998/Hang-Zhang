@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <assert.h>
+
+#define MAX_TIMES 10
+#define MIN_NUMBER 0
+#define MAX_NUMBER 100
+
+int IsValidNumber(const int number);
+void GuessNumber(const int number);
+int MakeNumber(void);
+int IsRight(const int nummber, const int guess);
+
+void GuessNumber ( const int number)
+{
+    static int guess;
+    static int count = 0;
+    static int right = 0;
+    static int ret;
+    do {
+        printf("Try %d :",count + 1);
+        ret = scanf("%d",&guess);
+        while (ret != 1 || !IsValidNumber(guess))
+        {
+            printf("Input error!\n");
+            while (getchar() != '\n');
+            printf("Try %d:",count + 1);
+            ret = scanf ("%d",&guess);
+        }
+        count++;
+        right = IsRight(number,guess);
+    }while (!right && count < MAX_TIMES);
+    if (right)
+        printf ("Congratulation ! You're so cool! \n");
+    else
+        printf("Mission failed after %d attempts \n",MAX_TIMES);
+    count = 0; ret = 0; guess = 0; right = 0;
+}
+
+int IsValidNumber(const int number)
+{
+    if (number >= MIN_NUMBER && number <= MAX_NUMBER)
+        return 1;
+    else
+        return 0;
+}
+
+int IsRight (const int number ,const int guess)
+{
+    if (guess < number)
+    {
+        printf("Wrong ! Too small !\n");
+        return 0;
+    }
+    else if (guess > number )
+    {
+        printf("Wrong ! Too big !\n");
+        return 0;
+    }
+    else return 1;
+}
+
+int MakeNumber(void)
+{
+    int number;
+    number = (rand()%(MAX_NUMBER - MIN_NUMBER)) + MIN_NUMBER;
+    assert(number >= MIN_NUMBER && number <= MAX_NUMBER);
+    return number;
+}
+
+int main (void)
+{
+    static int number;
+    static char reply;
+    srand(time(NULL));
+    do{
+        number = MakeNumber();
+        GuessNumber(number);
+        printf("Do you want to continue (Y/N or y/n)?");
+        scanf(" %c",&reply);
+    }while (reply == 'Y' || reply == 'y');
+    return 0;
+}
