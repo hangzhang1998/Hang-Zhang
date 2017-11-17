@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+void King_promise (void);
+
+void King_promise (void)
+{
+    static int i;
+    static double sum,term;
+    for ( i = 0; i < 64; i++)
+    {
+        term = pow(2,i);
+        sum += term;
+        printf(" the sum == %.1lf   ,   the term == %.1lf\n",sum, term);
+    }
+    printf("************************ the sum == %.1lf *************************\n",sum);
+    printf("\n\n\n\n\n                    the volume == %lf   .\n",sum/1.42e8);
+}
